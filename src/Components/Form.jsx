@@ -7,7 +7,7 @@ export const Form = () => {
   const { name, email, onInputChange } = useForm({
     name: "",
     email: "",
-  }, {});
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -37,18 +37,18 @@ export const Form = () => {
   }
 
   return (
-    <main className="form">
+    <div>
       <form onSubmit={handleSubmit}>
-        <div className="label">
-          <label htmlFor="name">Nombre: </label>
-          <input type="text" id="name" name="name" placeholder="Pepito Perez" value={name} onChange={onInputChange} />
+        <div>
+          <label htmlFor="name">Nombre:</label>
+          <input type="text" id="name" name="name" placeholder="Pepito Perez" className="bg-gray-50 border border-gray-300 text-sm rounded-lg w-full p-2.5 dark:text-black font-bold" value={name} onChange={onInputChange} />
         </div>
-        <div className="label">
-          <label htmlFor="email">Email: </label>
-          <input type="text" id="email" name="email" placeholder="Pepito.perez@email.com" value={email} onChange={onInputChange} />
+        <div className="mt-2">
+          <label htmlFor="email">Email:</label>
+          <input type="text" id="email" name="email" placeholder="Pepito.perez@email.com" className="bg-gray-50 border border-gray-300 text-sm rounded-lg w-full p-2.5 dark:text-black font-bold" value={email} onChange={onInputChange} />
         </div>
-        <button type="submit">Enviar</button>
+        <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center mt-4">Enviar</button>
       </form>
-    </main>
+    </div>
   );
 };

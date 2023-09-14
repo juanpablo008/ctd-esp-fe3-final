@@ -17,27 +17,25 @@ export const Detail = () => {
 
 
   return (
-    <>
-
-      <h1>Detail Dentist</h1>
-
+    <main className="dark:bg-slate-900 dark:text-white pb-5">
+      <h1 className="text-center text-6xl py-4">Detail Dentist</h1>
       {
         loading ?
-          <CircleLoader color="#000" /> :
+          <CircleLoader color="#3730a3" /> :
           dentist &&
-          (<main className="detail">
-            <img src="https://res.cloudinary.com/dk8ilhsow/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1694189901/doctor_ptoeob.jpg" alt={`dentist - ${id}`} />
-            <h2>{dentist.name}</h2>
-            <p><b>Username:</b> {dentist.username}</p>
-            <p><b>Email:</b> {dentist.email}</p>
-            <p><b>Phone:</b> {dentist.phone}</p>
-
-
-          </main>)
+          (
+            <main className="flex flex-col items-center gap-2">
+              <img src="https://res.cloudinary.com/dk8ilhsow/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1694189901/doctor_ptoeob.jpg" alt={`dentist - ${id}`} />
+              <h2 className="text-2xl font-bold">{dentist.name}</h2>
+              <p><b>Username:</b> {dentist.username}</p>
+              <p><b>Email:</b> {dentist.email}</p>
+              <p><b>Phone:</b> {dentist.phone}</p>
+            </main>
+          )
       }
 
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-    </>
+    </main>
   )
 }
