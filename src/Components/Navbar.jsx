@@ -2,8 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useAppContext } from '../Context/Context';
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-
 export const Navbar = () => {
 
   const { theme, changeTheme } = useAppContext();
@@ -33,7 +31,6 @@ export const Navbar = () => {
           }
         </button>
       </ul>
-      {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
     </nav>
   )
 }

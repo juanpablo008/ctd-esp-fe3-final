@@ -15,11 +15,8 @@ export const Card = ({ dentist }) => {
     <div className="p-2 border-2 border-indigo-800 flex flex-col items-center justify-center gap-3">
       <Link to={`/dentist/detail/${id}`}>
         <img src="https://res.cloudinary.com/dk8ilhsow/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1694189901/doctor_ptoeob.jpg" alt={`dentist - ${id}`} />
-        {/* En cada card deberan mostrar en name - username y el id */}
         <h3 className="text-xl font-bold">{name}</h3>
-        {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
         <p>{username}</p>
-        {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
       </Link>
       <button onClick={onClickFav} className="bg-slate-100 rounded-lg p-1 text-yellow-500">
         {

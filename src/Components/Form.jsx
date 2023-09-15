@@ -2,7 +2,6 @@ import { showAlertSuccErr } from "../Helpers/showAlerts";
 import { useForm } from "../Hooks/useForm";
 
 export const Form = () => {
-  //Aqui deberan implementar el form completo con sus validaciones
 
   const { name, email, onInputChange } = useForm({
     name: "",
@@ -12,24 +11,16 @@ export const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (name.length <= 5) {
+    if (name.length <= 5 || !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
       showAlertSuccErr({
-        title: 'El nombre debe tener al menos 5 caracteres',
-        icon: 'error'
-      })
-      return
-    }
-
-    if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
-      showAlertSuccErr({
-        title: 'El correo es invalido',
+        title: 'Por favor verifique su información nuevamente',
         icon: 'error'
       })
       return
     }
 
     showAlertSuccErr({
-      title: `Gracias ${name}, te contactaremos pronto!!`,
+      title: `Gracias ${name}, te contactaremos cuando antes vía mail`,
       icon: 'success'
     })
 

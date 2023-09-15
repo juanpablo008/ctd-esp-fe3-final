@@ -1,7 +1,5 @@
 import { Form } from "../Components"
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-
 export const Contact = () => {
   return (
     <main className="py-20 flex flex-col items-center justify-center dark:bg-slate-900 dark:text-white">

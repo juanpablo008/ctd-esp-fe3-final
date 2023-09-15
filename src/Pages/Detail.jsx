@@ -1,5 +1,3 @@
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useAppContext } from "../Context/Context";
@@ -33,9 +31,6 @@ export const Detail = () => {
             </main>
           )
       }
-
-      {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-      {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
     </main>
   )
 }

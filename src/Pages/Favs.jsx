@@ -3,8 +3,6 @@ import { useAppContext } from "../Context/Context";
 import { CircleLoader } from "react-spinners";
 import { Card } from "../Components";
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-
 export const Favs = () => {
 
   const { dentistsFavs, loading } = useAppContext();
@@ -25,8 +23,6 @@ export const Favs = () => {
               :
               <p className="text-xl">No hay dentistas favoritos</p>
         }
-        {/* este componente debe consumir los destacados del localStorage */}
-        {/* Deberan renderizar una Card por cada uno de ellos */}
       </main>
     </>
   );
